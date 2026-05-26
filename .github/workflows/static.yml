@@ -24,11 +24,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Pages
-        uses: actions/configure-pages@v6
+        uses: ./.github/actions/configure-pages
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v5
+        uses: ./.github/actions/upload-pages-artifact
         with:
           path: .
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v5
+        uses: ./.github/actions/deploy-pages
